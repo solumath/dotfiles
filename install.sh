@@ -17,11 +17,11 @@ ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
 ln -sf $(realpath ~/.dotfiles/zsh/.zshrc) ~/.zshrc
 ln -sf $(realpath ~/.dotfiles/zsh/.p10k.zsh) ~/.p10k.zsh
 
-# Initialize plugins and themes
+# Initialize submodules
 cd ~/.dotfiles
 git submodule update --init --recursive
 
-# Add SSH keys
+# Add SSH keys, make sure to have correct permissions on ~/.ssh and ~/.ssh/authorized_keys
 mkdir -p ~/.ssh
 curl https://github.com/solumath.keys | tee -a ~/.ssh/authorized_keys
 curl https://github.com/dfajmon.keys | tee -a ~/.ssh/authorized_keys

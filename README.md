@@ -5,7 +5,12 @@ Works by creating symlinks and placing them in $HOME.
 
 ## Prerequisites
 
-Before installing, make sure to install `git`, `zsh`, and `oh-my-zsh`.
+You need to have the following installed:
+
+- `git`
+- `curl`
+- `zsh`
+- `oh-my-zsh`
 
 ```bash
 sudo apt install git zsh
@@ -20,9 +25,13 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/solumath/.dotfiles/main/in
 
 ## Updating
 
-Update as normal git repository.
-
 ### Pull changes
+
+```bash
+config_update
+```
+
+or manually
 
 ```bash
 git pull
@@ -33,4 +42,5 @@ git pull
 ```bash
 git add .
 git commit -m "Update dotfiles"
+git push
 ```
