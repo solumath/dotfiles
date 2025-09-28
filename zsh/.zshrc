@@ -148,3 +148,6 @@ bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 if command -v gimme > /dev/null 2>&1; then
   eval "$(gimme 1.24.6)" > /dev/null 2>&1
 fi
+
+# Load custom zshrc if exists, so every machine can have its own settings
+[ -f ~/.zshrc_custom ] && source ~/.zshrc_custom
