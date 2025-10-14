@@ -123,6 +123,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias k="kubectl"
 alias config_update="git -C ${HOME}/.dotfiles pull && exec zsh"
+alias d="docker"
+alias dcrebuild="docker compose down && docker compose up --build -d"
+alias dclogs="docker compose logs -f"
 
 if command -v kwallet-query > /dev/null 2>&1; then
   alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
