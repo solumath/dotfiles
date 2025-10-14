@@ -10,13 +10,14 @@ fi
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
+export DOTFILES="${HOME}/.dotfiles"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="powerlevel10k/powerlevel10k"
-ZSH_CUSTOM="${HOME}/.dotfiles/zsh/custom"
+ZSH_CUSTOM="$DOTFILES/zsh/custom"
 # Create folder and move zcompdump files to cache directory
 # Must be done before sourcing oh-my-zsh.sh
 mkdir -p "$HOME/.cache/zsh"
@@ -122,7 +123,8 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 
 alias k="kubectl"
-alias config_update="git -C ${HOME}/.dotfiles pull && exec zsh"
+alias config_update="git -C $DOTFILES pull && exec zsh"
+alias config_push="git -C $DOTFILES add . && git -C $DOTFILES commit -m 'Update dotfiles' && git -C $DOTFILES push"
 alias d="docker"
 alias dcrebuild="docker compose down && docker compose up --build -d"
 alias dclogs="docker compose logs -f"
