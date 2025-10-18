@@ -126,8 +126,9 @@ alias k="kubectl"
 alias config_update="git -C $DOTFILES pull && exec zsh"
 alias config_push="git -C $DOTFILES add . && git -C $DOTFILES commit -m 'Update dotfiles' && git -C $DOTFILES push"
 alias d="docker"
+alias dc="docker compose"
 alias dcrebuild="docker compose down && docker compose up --build -d"
-alias dclogs="docker compose logs -f"
+alias dclogs="docker compose logs -ft"
 
 if command -v kwallet-query > /dev/null 2>&1; then
   alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
