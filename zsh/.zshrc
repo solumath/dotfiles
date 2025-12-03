@@ -43,7 +43,7 @@ ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 
 # Add specific ssh keys to agent
 zstyle :omz:plugins:ssh-agent identities id_ed25519 github_solumath
-zstyle ':autocomplete:*' delay 0.15
+zstyle ':autocomplete:*' delay 0.05
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -130,6 +130,7 @@ alias dc="docker compose"
 alias dcrebuild="docker compose down && docker compose up --build -d"
 alias dclogs="docker compose logs -ft"
 
+# Work setup
 if command -v kwallet-query > /dev/null 2>&1; then
   alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
   export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
@@ -145,6 +146,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:$PATH"
 
 bindkey '^H' backward-kill-word       # Ctrl+Backspace removes the word before the cursor
 bindkey '5~' kill-word                # Ctrl+Delete removes the word after the cursor
