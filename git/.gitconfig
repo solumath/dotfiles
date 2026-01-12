@@ -42,6 +42,8 @@
 	autoSquash = true
 	autoStash = true
 	updateRefs = true
+[remote]
+	pushDefault = origin
 [gpg "ssh"]
 	program = ssh-keygen
 	allowedSignersFile = ""
