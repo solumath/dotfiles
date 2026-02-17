@@ -61,7 +61,7 @@
     command_execution_time    # previous command duration
     virtualenv                # python virtual environment
     context                   # user@host
-    # time                    # current time
+    time                      # current time
   )
 
   # Basic style options that define the overall prompt look.

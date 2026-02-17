@@ -5,7 +5,7 @@
 [core]
 	editor = nano
 	sshCommand = ssh -i ~/.ssh/id_ed25519
-	excludesfile = ~/.gitignore
+	excludesfile = ~/.gitignore_global
 [gpg]
 	program = gpg
 	format = openpgp
