@@ -129,6 +129,7 @@ alias d="docker"
 alias dc="docker compose"
 alias dcrebuild="docker compose down && docker compose up --build -d"
 alias dclogs="docker compose logs -ft"
+alias n="nvim"
 
 # Work setup
 if command -v kwallet-query > /dev/null 2>&1; then
@@ -147,6 +148,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.npm-global/bin:$PATH"
+export REGISTRY_AUTH_FILE="${HOME}/.docker/config.json"
 
 bindkey '^H' backward-kill-word       # Ctrl+Backspace removes the word before the cursor
 bindkey '5~' kill-word                # Ctrl+Delete removes the word after the cursor
@@ -154,7 +156,7 @@ bindkey '^I' menu-complete            # Tab key for completion
 bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 
 if command -v gimme > /dev/null 2>&1; then
-  eval "$(gimme 1.24.6)" > /dev/null 2>&1
+  eval "$(gimme 1.25.7)" > /dev/null 2>&1
 fi
 
 # Load custom zshrc if exists, so every machine can have its own settings

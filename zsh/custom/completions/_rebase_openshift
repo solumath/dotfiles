@@ -1,0 +1,16 @@
+#compdef rebase_openshift
+
+_rebase_openshift() {
+  _arguments \
+    '(- :)'{-h,--help}'[display help message]' \
+    '--story_id[story number in Jira]:story ID' \
+    '--ocp_current[current OCP version (e.g\: 4.21, 4.22)]:OCP version' \
+    '--ocp_old[old OCP version (defaults to ocp_current)]:OCP version' \
+    '--upstream_tag[upstream release version (e.g\: v1.12.0)]:tag' \
+    '--old_upstream_tag[previous upstream version to compare from]:tag' \
+    '--release_pattern[regex pattern to filter releases (default\: ^v\[0-9\])]:pattern' \
+    '--skip-fetch[skip git fetch operations]' \
+    '--skip-branch[skip branch creation and merge]'
+}
+
+_rebase_openshift "$@"
