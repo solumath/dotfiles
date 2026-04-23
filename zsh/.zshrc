@@ -43,7 +43,6 @@ ZSH_COMPDUMP="${HOME}/.cache/zsh/.zcompdump-${(%):-%m}-${ZSH_VERSION}"
 
 # Add specific ssh keys to agent
 zstyle :omz:plugins:ssh-agent identities id_ed25519 github_solumath
-zstyle ':autocomplete:*' delay 0.05
 
 # Uncomment the following line to change how often to auto-update (in days).
 # zstyle ':omz:update' frequency 13
@@ -91,7 +90,6 @@ HIST_STAMPS="%d/%m/%Y %T"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
-  zsh-autocomplete
   zsh-autosuggestions
   zsh-syntax-highlighting
   ssh-agent

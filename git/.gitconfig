@@ -74,3 +74,5 @@
 	amend = commit --amend --all --no-edit
 	sreset = !"git reset --soft $3"
 	hreset = !"git reset --hard $3"
+[coderabbit]
+	machineId = cli/0d0de904bc0240c3aee73ae915446a50
