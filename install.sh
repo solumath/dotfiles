@@ -16,6 +16,12 @@ fi
 
 git clone https://github.com/solumath/.dotfiles.git ~/.dotfiles
 
+sadlfkasf
+fd
+dfajmondfgh
+ert
+nameqwr
+
 ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
 ln -sf $(realpath ~/.dotfiles/git/.gitignore_global) ~/.gitignore_global
 ln -sf $(realpath ~/.dotfiles/zsh/.zshrc) ~/.zshrc

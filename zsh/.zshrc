@@ -149,7 +149,9 @@ export PATH="$HOME/.npm-global/bin:$PATH"
 export REGISTRY_AUTH_FILE="${HOME}/.docker/config.json"
 
 bindkey '^H' backward-kill-word       # Ctrl+Backspace removes the word before the cursor
-bindkey '5~' kill-word                # Ctrl+Delete removes the word after the cursor
+bindkey '^[[1;5C' forward-word        # Ctrl+Right
+bindkey '^[[1;5D' backward-word       # Ctrl+Left
+bindkey '^[[3;5~' kill-word           # Ctrl+Delete
 bindkey '^I' menu-complete            # Tab key for completion
 bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 

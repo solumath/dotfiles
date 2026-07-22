@@ -1,3 +1,4 @@
 .claude/*
 .vscode/*
 .rebase/*
+**/.claude/settings.local.json
