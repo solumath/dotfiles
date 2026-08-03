@@ -22,6 +22,9 @@ dfajmondfgh
 ert
 nameqwr
 
+mkdir -p ~/.config/lazygit
+ln -sf $(realpath ~/.dotfiles/lazygit/config.yml) ~/.config/lazygit/config.yml
+
 ln -sf $(realpath ~/.dotfiles/git/.gitconfig) ~/.gitconfig
 ln -sf $(realpath ~/.dotfiles/git/.gitignore_global) ~/.gitignore_global
 ln -sf $(realpath ~/.dotfiles/zsh/.zshrc) ~/.zshrc
