@@ -16,12 +16,6 @@ fi
 
 git clone https://github.com/solumath/.dotfiles.git ~/.dotfiles
 
-sadlfkasf
-fd
-dfajmondfgh
-ert
-nameqwr
-
 mkdir -p ~/.config/lazygit
 ln -sf $(realpath ~/.dotfiles/lazygit/config.yml) ~/.config/lazygit/config.yml
 
@@ -36,5 +30,6 @@ git submodule update --init --recursive
 
 # Add SSH keys, make sure to have correct permissions on ~/.ssh and ~/.ssh/authorized_keys
 mkdir -p ~/.ssh
+chmod 700 ~/.ssh
 curl https://github.com/solumath.keys | tee -a ~/.ssh/authorized_keys
 curl https://github.com/dfajmon.keys | tee -a ~/.ssh/authorized_keys
