@@ -3,11 +3,12 @@
 -- Add any additional keymaps here
 
 -- Map Ctrl + / to toggle comments in Normal and Visual mode
--- In many terminals, Ctrl + / is sent as Ctrl + _
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Toggle Comment" })
-vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("n", "<C-S-/>", "gcc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("n", "<C-S-{>", "gcc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Toggle Comment" })
-vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("v", "<C-S-/>", "gc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("v", "<C-S-{>", "gc", { remap = true, desc = "Toggle Comment" })
 
 -- Delete word backward/forward in Insert Mode
 vim.keymap.set("i", "<C-Delete>", "<C-o>de", { noremap = true, silent = true })

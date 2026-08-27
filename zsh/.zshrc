@@ -130,10 +130,10 @@ alias dclogs="docker compose logs -ft"
 alias n="nvim"
 
 # Work setup
-if command -v kwallet-query > /dev/null 2>&1; then
-  alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
-  export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
-fi
+# if command -v kwallet-query > /dev/null 2>&1; then
+  # alias kinit_login="kwallet-query -r kinit kdewallet -f accounts | kinit dfajmon@IPA.REDHAT.COM"
+  # export GITHUB_TOKEN=$(kwallet-query -r github_token kdewallet -f accounts)
+# fi
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -155,8 +155,10 @@ bindkey '^[[3;5~' kill-word           # Ctrl+Delete
 bindkey '^I' menu-complete            # Tab key for completion
 bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 
-if command -v gimme > /dev/null 2>&1; then
-  eval "$(gimme 1.25.7)" > /dev/null 2>&1
+# https://github.com/jdx/mise
+# a dev tool to manage version of go, python, npm, ...
+if command -v mise > /dev/null 2>&1; then
+  eval "$(mise activate zsh)"
 fi
 
 # Load custom zshrc if exists, so every machine can have its own settings
