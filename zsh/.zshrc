@@ -155,6 +155,13 @@ bindkey '^[[3;5~' kill-word           # Ctrl+Delete
 bindkey '^I' menu-complete            # Tab key for completion
 bindkey '^[[Z' reverse-menu-complete  # Shift+Tab for reverse completion
 
+function backward-kill-full-word() {
+  local WORDCHARS='*?_-.[]~=/&;!#$%^(){}<>|@'
+  zle backward-kill-word
+}
+zle -N backward-kill-full-word        # Register Zsh Line Editor widget for the custom function
+bindkey '^W' backward-kill-full-word
+
 # https://github.com/jdx/mise
 # a dev tool to manage version of go, python, npm, ...
 if command -v mise > /dev/null 2>&1; then
