@@ -12,7 +12,7 @@ vim.keymap.set("v", "<C-S-{>", "gc", { remap = true, desc = "Toggle Comment" })
 
 -- Delete word backward/forward in Insert Mode
 vim.keymap.set("i", "<C-Delete>", "<C-o>de", { noremap = true, silent = true })
-vim.keymap.set("i", "<C-H>", "<C-w>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
 
 -- Jump words forward/backward in Insert Mode
 vim.keymap.set("i", "<C-Left>", "<C-o>b", { noremap = true })
@@ -23,4 +23,4 @@ vim.keymap.set("n", "<C-Left>", "b", { noremap = true })
 vim.keymap.set("n", "<C-Right>", "w", { noremap = true })
 
 -- VSCode-style rename
-vim.keymap.set("n", "<F2>", vim.lsp.buf.rename, { desc = "Rename" })
+vim.keymap.set({ "n", "i" }, "<F2>", vim.lsp.buf.rename, { desc = "Rename" })
