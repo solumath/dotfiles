@@ -4,15 +4,18 @@
 
 -- Map Ctrl + / to toggle comments in Normal and Visual mode
 vim.keymap.set("n", "<C-/>", "gcc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("n", "<C-_>", "gcc", { remap = true, desc = "Toggle Comment" }) -- backward compat alias
 vim.keymap.set("n", "<C-S-/>", "gcc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("n", "<C-S-{>", "gcc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("v", "<C-/>", "gc", { remap = true, desc = "Toggle Comment" })
+vim.keymap.set("v", "<C-_>", "gc", { remap = true, desc = "Toggle Comment" }) -- backward compat alias
 vim.keymap.set("v", "<C-S-/>", "gc", { remap = true, desc = "Toggle Comment" })
 vim.keymap.set("v", "<C-S-{>", "gc", { remap = true, desc = "Toggle Comment" })
 
 -- Delete word backward/forward in Insert Mode
 vim.keymap.set("i", "<C-Delete>", "<C-o>de", { noremap = true, silent = true })
 vim.keymap.set("i", "<C-BS>", "<C-w>", { noremap = true, silent = true })
+vim.keymap.set("i", "<C-H>", "<C-w>", { noremap = true, silent = true }) -- backward compat alias
 
 -- Jump words forward/backward in Insert Mode
 vim.keymap.set("i", "<C-Left>", "<C-o>b", { noremap = true })
@@ -24,3 +27,6 @@ vim.keymap.set("n", "<C-Right>", "w", { noremap = true })
 
 -- VSCode-style rename
 vim.keymap.set({ "n", "i" }, "<F2>", vim.lsp.buf.rename, { desc = "Rename" })
+
+-- Select all
+vim.keymap.set("n", "<C-a>", "ggVG", { noremap = true, desc = "Select All" })
